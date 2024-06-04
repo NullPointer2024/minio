@@ -1,4 +1,4 @@
-package com.orchids.minio.model;
+package com.orchids.minio.model.result;
 
 import lombok.Data;
 
@@ -28,7 +28,7 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> build(T body, CodeEnum resultCodeEnum) {
+    public static <T> Result<T> build(T body, ResultCode resultCodeEnum) {
         Result<T> result = build(body);
         result.setCode(resultCodeEnum.getCode());
         result.setMessage(resultCodeEnum.getMessage());
@@ -37,7 +37,7 @@ public class Result<T> {
 
 
     public static <T> Result<T> ok(T data) {
-        return build(data, CodeEnum.SUCCESS);
+        return build(data, ResultCode.SUCCESS);
     }
 
     public static <T> Result<T> ok() {
@@ -45,6 +45,6 @@ public class Result<T> {
     }
 
     public static <T> Result<T> fail() {
-        return build(null, CodeEnum.FAIL);
+        return build(null, ResultCode.FAIL);
     }
 }

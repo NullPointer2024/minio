@@ -1,9 +1,9 @@
-package com.orchids.minio.model;
+package com.orchids.minio.model.result;
 
 import lombok.Getter;
 
 @Getter
-public enum CodeEnum {
+public enum ResultCode {
 
     SUCCESS(200, "成功"),
     FAIL(201, "失败");
@@ -12,7 +12,7 @@ public enum CodeEnum {
 
     private final String message;
 
-    CodeEnum(Integer code, String message) {
+    ResultCode(Integer code, String message) {
         this.code = code;
         this.message = message;
     }

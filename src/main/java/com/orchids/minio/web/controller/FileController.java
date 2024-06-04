@@ -1,6 +1,6 @@
 package com.orchids.minio.web.controller;
 
-import com.orchids.minio.model.Result;
+import com.orchids.minio.model.result.Result;
 import com.orchids.minio.web.service.FileService;
 import io.minio.errors.*;
 import io.swagger.v3.oas.annotations.Operation;
